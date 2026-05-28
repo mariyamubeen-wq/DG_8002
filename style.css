@@ -1,7 +1,30 @@
 h1 {
     color:darkslategrey;
     font-size: 52px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Chakra Petch;
     text-align: center;
+    padding: 15px;
+    border: 5px;
+    border-style: groove;
+    border-color: darkblue;
     
+}
+
+.dropdown {
+    background: skyblue;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: flex-end;
+}
+
+h2 {
+    font-family: Chakra Petch;
+}
+
+body {
+    font-family: Chakra Petch;
 }
