@@ -46,3 +46,37 @@ elif num == int(50):
 else:
     print("Boooooo!")
 
+
+#In-Class Assignment
+print("So, you wanna convert miles to Kilometers eh...?")
+print("Americans...")
+
+speed_in_miles = float(input("Alright, what is it in Freedom Units?"))
+speed_in_km = speed_in_miles * 1.6
+print(f"The speed in normal units is: {speed_in_km}")
+
+if speed_in_km == 69:
+    print("Nice...")
+elif speed_in_km < 100:
+    print("You're Within the Limit.")
+else:
+    print("Youre going too Fast!!")
+
+
+#Logical Operators: "and" & "or"
+    #In Class Assignmnet
+
+season = input("What is the month?")
+
+if season == "January" or season == "February" or season == "December":
+    print ("It's Winter!")
+elif season == "March" or season == "April" or season == "May":
+    print ("It's Spring!")
+elif season == "June" or season == "July" or season == "August":
+    print ("It's Summer!")
+elif season == "September" or season == "October" or season == "November":
+    print ("It's Fall!") 
+else:
+    print (":/ I think you spelt something wrong. Try again.")
+
+
