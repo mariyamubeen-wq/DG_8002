@@ -1,12 +1,48 @@
 h1 {
     font-family: Niconne;
+    font-size: 3em;
+    color: #2b1a2e;
+    padding: 5px;
 }
 h2 {
     font-family: Niconne;
+    font-size: 2.5em;
+    color: #2b1a2e;
 }
 h3 {
     font-family: Niconne;
+    font-size: 2em;
+    color: #2b1a2e;
 }
-.rituals {
+p {
+    font-family: Kay Pho Du;
+}
+ul {
+    font-family: Kay Pho Du;
+}
 
+table, th, td {
+    font-family: Kay Pho Du;
+    border: 1.5px solid darkgoldenrod;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.rituals {
+    background-color: lightgoldenrodyellow;
+    font-style: italic;
+}
+
+.center {
+    background-color: #ead5ed;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.splash {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
