@@ -40,6 +40,7 @@ table, th, td {
     align-content: center;
     padding-left: 20%;
     padding-right: 20%;
+    padding-bottom: 5%;
 }
 .splash {
     display: flex;
