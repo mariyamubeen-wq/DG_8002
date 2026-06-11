@@ -83,7 +83,7 @@ while num !=0:
 fruits = ["apple", "banana", "cantalope"]
 fruits.append("durian")
 fruits.remove("apple")
-
+print(fruits[0])
 # Printing elements of a list:
 
 grades =[75, 71, 82, 90, 68, 65, 88, 73, 77, 51]
