@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> The heading </h1>
+    <h1 id="secret"> The heading </h1>
+    <p>A paragraph</p>
+    <p>A second paragraph</p>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <script>
+        var heading = document.querySelector("#secret");
+        heading.style.color = "purple";
+        heading.textContent = "You have found my secret recipe!";
+        heading.list.innerHTML = "<li>Updated item</li>"; 
+        // The script will only impact the first h1 tag and then resolve the code, unless an id is specified.
+        var head1 = document.querySelector("h1")
+        heading.style.style = "italic";
+
+
+    </script>
+</body>
+</html>
