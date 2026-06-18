@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> The heading </h1>
+    <h1 id="italics"> The heading </h1>
     <h1 id="secret"> The heading </h1>
-    <p>A paragraph</p>
+    <p id="para1">A paragraph</p>
     <p>A second paragraph</p>
     <ul>
         <li>item 1</li>
@@ -18,12 +18,16 @@
 
     <script>
         var heading = document.querySelector("#secret");
+        var head1 = document.querySelector("#italics");
+        var para = document.querySelector("#para1");
         heading.style.color = "purple";
         heading.textContent = "You have found my secret recipe!";
-        heading.list.innerHTML = "<li>Updated item</li>"; 
+        head1.style.fontStyle = "italic";
+        para.style.backgroundColor = "lightblue"
+
+
         // The script will only impact the first h1 tag and then resolve the code, unless an id is specified.
-        var head1 = document.querySelector("h1")
-        heading.style.style = "italic";
+
 
 
     </script>

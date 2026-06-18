@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title> </title>
+</head>
+    <body>
+        <h1> Welcome to the Harry Potter Quiz! </h1>
+        <p>Welcome Muggle! Which year was the first Harry Potter Book released?</p>
+        <ul>
+            <li id="ans1">1997</li>
+            <li id="ans2">1999</li>
+            <li id="ans3">2003</li>
+        </ul>
+        <p id="ansbox">Correct answer will be shown here</p>
+
+        <script>
+            var ans = prompt("Which year was the first Harry Potter Book released?");
+
+            if (ans == 1997){
+                var correctans = document.querySelector("#ans1");
+                correctans.style.backgroundColor = "green";
+                var anstext = document.querySelector("#ansbox");
+                anstext.textContent = "Your ans is " + ans + " which is correct! Well Done!";
+            }
+            else if (ans == 1999){
+                var wrongans = document.querySelector("#ans2");
+                wrongans.style.backgroundColor = "red";
+                var anstext = document.querySelector("#ansbox");
+                anstext.textContent = "Your ans is " + ans + " which is wrong you loser!";
+            }
+            else if (ans == 2003){
+                var wrongans = document.querySelector("#ans3");
+                wrongans.style.backgroundColor = "red";
+                var anstext = document.querySelector("#ansbox");
+                anstext.textContent = "Your ans is " + ans + " which is wrong you loser!";
+            }
+            else {
+                var anstext = document.querySelector("#ansbox");
+                anstext.textContent = "I don't speak loser... Try again!";
+                anstext.style.color = "red";
+            }
+        </script>
+    </body>
+</html>
