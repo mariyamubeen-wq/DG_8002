@@ -2,6 +2,15 @@ import random
 
 game_Start = input("Welcome to Lady Luck's game of Craps! Care to try your fortune today? [Type 'Roll' to start or 'Quit' to exit.]")
 game_round = 0
+
+while game_Start != "roll" or game_Start != "Roll" or game_Start != "ROLL" or game_Start != "quit" or game_Start != "Quit" or game_Start != "QUIT":
+    game_Start = input("Lady Luck can't understand you gibberish. Try Again... [Type 'Roll' to start or 'Quit' to exit.]")
+    if game_Start == "quit" or game_Start == "Quit" or game_Start == "QUIT":
+        break 
+    else:
+        game_Start == "roll" or game_Start == "Roll" or game_Start == "ROLL"
+        break
+
 while game_Start == "roll" or game_Start == "Roll" or game_Start == "ROLL":
     dice_1 = random.randint(1,6)
     dice_2 = random.randint(1,6)
@@ -25,14 +34,3 @@ while game_Start == "roll" or game_Start == "Roll" or game_Start == "ROLL":
     else:
         print(f"You played {game_round} rounds!")
         game_Start = input("Oh, one more round! Type 'Roll' to play again or 'Quit' to exit:")
-
-
-
-
-
-# while game_Start != "roll" or game_Start != "Roll" or game_Start != "ROLL" or game_Start != "quit" or game_Start != "Quit" or game_Start != "QUIT":
-#     game_Start = input("Lady Luck can't understand you gibberish. Try Again... [Type 'Roll' to start or 'Quit' to exit.]")
-#     if game_Start == "quit" or game_Start == "Quit" or game_Start == "QUIT":
-#         break 
-#     else:
-#         game_Start == "roll" or game_Start == "Roll" or game_Start == "ROLL"
