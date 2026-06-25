@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 8 JAVA</title>
+    </head>
+<body>
+    <h1 id="heading1"> The heading </h1>
+    <p id="p1">A paragraph</p>
+    <p id="p2">Another paragraph</p>
+    <p id="p3">Yet another paragraph</p>
+    <input type="button" value="Click me!" id="mybutton">
+    
+    <script>
+        var mybutton = document.querySelector("#mybutton");
+        var p3 = document.querySelector("#p3");
+        var heading1 = document.querySelector("#heading1");
+
+        function whenClicked(){
+
+            p3.textContent = "BOOOO!!";
+            p3.style.color = "red";
+
+        }
+
+        function changeHeadingcolor(){
+           if(this.id == "heading1"){
+            this.style.backgroundColor = "lightblue";
+           }else if (this.id == "p3"){
+            this.style.backgroundColor = "green";
+           }
+        }
+        function changeHeadingcolorReset(){
+           this.style.backgroundColor = "white"; 
+        }
+        
+        mybutton.addEventListener("click",whenClicked)
+
+        heading1.addEventListener("mouseover",changeHeadingcolor)
+        heading1.addEventListener("mouseout",changeHeadingcolorReset)
+
+        p3.addEventListener("mouseover",changeHeadingcolor)
+        p3.addEventListener("mouseout",changeHeadingcolorReset)
+
+    </script>
+</body>
+</html>
