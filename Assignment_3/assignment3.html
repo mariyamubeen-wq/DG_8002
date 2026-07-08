@@ -24,17 +24,16 @@
 
      <script>
     // Variables
+        var p1 = document.querySelector("#p1");
+        var p2 = document.querySelector("#p2");
+        var p3 = document.querySelector("#p3");
+        var a1 = document.querySelector("#a1");
+        var a2 = document.querySelector("#a2");
+        var a3 = document.querySelector("#a3");
         var CartTotal = document.querySelector("#totalprice");
+        var payment = document.querySelector("#payment");
+        var purchase = document.querySelector("#purchase");
         var message = document.querySelector("#message");
-        var p1 = document.querySelector("#p1")
-        var p2 = document.querySelector("#p2")
-        var p3 = document.querySelector("#p3")
-        var a1 = document.querySelector("#a1")
-        var a2 = document.querySelector("#a2")
-        var a3 = document.querySelector("#a3")
-        var purchase = document.querySelector("#purchase")
-        var payment = document.querySelector("#payment")
-
     // Functions
         function hoverOn(){
         if(this.id == "p1"){
@@ -45,8 +44,7 @@
             this.textContent = "Released on 10 October 2007. 10 tracks.";
             }
        }
-
-       function hoverOff(){
+        function hoverOff(){
         if(this.id == "p1"){
             this.textContent = "OK Computer";
             }else if (this.id == "p2"){
@@ -57,17 +55,28 @@
        }
 
        function onClick(){
-        if(this.id == "a1"){
-
-        }else if(this.id == "a2"){
-
-        }
-        else if(this.id == "a3"){
-            
-        }
-        else if(this.id == "purchase"){
-            message.textContent = "Success!"
-            message.style.color = "green"
+            var total = 0
+            if (this.id == "a1"){
+                total = total + 10;
+                a1.setAttribute("disabled", "true");
+                CartTotal.textContent = total
+            }else if(this.id == "a2"){
+                CartTotal.textContent = total + 15;
+                a2.setAttribute("disabled", "true");
+                CartTotal == total;
+            }else if(this.id == "a3"){
+                CartTotal.textContent = total + 20;
+                a3.setAttribute("disabled", "true");
+                CartTotal == total;
+            }
+            else if(this.id == "purchase"){
+                if(payment == total){
+                    message.textContent = "Payment Successful! Have a good day :)";
+                    message.style.color = "green";
+                }else if(payment != total){
+                message.textContent = "Error! Payment not equal to price. Try Again.";
+                message.style.color = "Red";
+            }
         }
        }
 
