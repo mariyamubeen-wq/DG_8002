@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Radiohead Music Store </title>
+</head>
+    <body>
+    <h1 id="heading1"> Click "add to cart" to add item </h1>
+    <p id="p1">OK Computer</p>
+    <p>Price: $10</p>
+   <input type="button" value="Add Item 1 to Cart" id="a1">
+   <p id="p2">Hail to the Thief</p>
+   <p>Price: $15</p>
+   <input type="button" value="Add Item 2 to Cart" id="a2">
+   <p id="p3">In Rainbows</p>
+   <p>Price: $20</p>
+   <input type="button" value="Add Item 3 to Cart" id="a3">
+    <p>Cart Total:</p>
+     <p id="totalprice">0</p>
+     <p>Enter Payment Amount:</p>
+     <input type="number" id="payment">
+     <input type="button" value="Confirm Purchase" id="purchase">
+     <p id="message"></p>
+
+
+     <script>
+    // Variables
+        var CartTotal = document.querySelector("#totalprice");
+        var message = document.querySelector("#message");
+        var p1 = document.querySelector("#p1")
+        var p2 = document.querySelector("#p2")
+        var p3 = document.querySelector("#p3")
+        var a1 = document.querySelector("#a1")
+        var a2 = document.querySelector("#a2")
+        var a3 = document.querySelector("#a3")
+        var purchase = document.querySelector("#purchase")
+        var payment = document.querySelector("#payment")
+
+    // Functions
+        function hoverOn(){
+        if(this.id == "p1"){
+            this.textContent = "Released on 21 May 1997. 12 tracks.";
+            }else if (this.id == "p2"){
+            this.textContent = "Released on 9 June 2003. 14 tracks.";
+            }else if (this.id == "p3"){
+            this.textContent = "Released on 10 October 2007. 10 tracks.";
+            }
+       }
+
+       function hoverOff(){
+        if(this.id == "p1"){
+            this.textContent = "OK Computer";
+            }else if (this.id == "p2"){
+            this.textContent = "Hail to the Thief";
+            }else if (this.id == "p3"){
+            this.textContent = "In Rainbows";
+            }
+       }
+
+       function onClick(){
+        if(this.id == "a1"){
+
+        }else if(this.id == "a2"){
+
+        }
+        else if(this.id == "a3"){
+            
+        }
+        else if(this.id == "purchase"){
+            message.textContent = "Success!"
+            message.style.color = "green"
+        }
+       }
+
+
+    // Button Clicking
+        a1.addEventListener("click",onClick)
+        a2.addEventListener("click",onClick)
+        a3.addEventListener("click",onClick)
+        purchase.addEventListener("click",onClick)  
+
+    // Album Hovers
+        p1.addEventListener("mouseover",hoverOn)
+        p1.addEventListener("mouseout",hoverOff)
+        p2.addEventListener("mouseover",hoverOn)
+        p2.addEventListener("mouseout",hoverOff)
+        p3.addEventListener("mouseover",hoverOn)
+        p3.addEventListener("mouseout",hoverOff)
+
+
+     </script>
+    </body>
+</html>
+
