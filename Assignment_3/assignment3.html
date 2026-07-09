@@ -34,6 +34,7 @@
         var payment = document.querySelector("#payment");
         var purchase = document.querySelector("#purchase");
         var message = document.querySelector("#message");
+        var total = 0;
     // Functions
         function hoverOn(){
         if(this.id == "p1"){
@@ -55,25 +56,24 @@
        }
 
        function onClick(){
-            var total = 0
             if (this.id == "a1"){
                 total = total + 10;
                 a1.setAttribute("disabled", "true");
-                CartTotal.textContent = total
+                CartTotal.textContent = total;
             }else if(this.id == "a2"){
-                CartTotal.textContent = total + 15;
+                total = total + 15;
                 a2.setAttribute("disabled", "true");
-                CartTotal == total;
+                CartTotal.textContent = total;
             }else if(this.id == "a3"){
-                CartTotal.textContent = total + 20;
+                total = total + 20;
                 a3.setAttribute("disabled", "true");
-                CartTotal == total;
+                CartTotal.textContent = total;
             }
             else if(this.id == "purchase"){
-                if(payment == total){
+                if(payment = total){
                     message.textContent = "Payment Successful! Have a good day :)";
                     message.style.color = "green";
-                }else if(payment != total){
+                }else{
                 message.textContent = "Error! Payment not equal to price. Try Again.";
                 message.style.color = "Red";
             }
