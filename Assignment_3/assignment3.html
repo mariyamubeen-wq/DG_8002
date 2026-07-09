@@ -70,7 +70,7 @@
                 CartTotal.textContent = total;
             }
             else if(this.id == "purchase"){
-                if(payment = total){
+                if(payment.value == total){
                     message.textContent = "Payment Successful! Have a good day :)";
                     message.style.color = "green";
                 }else{
